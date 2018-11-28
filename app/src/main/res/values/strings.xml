@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Hello CSIRT Alpha</string>
+    <string-array name="pilihan_dropdown">
+        <item>-topik-</item>
+        <item> Infrastructure as a Service</item>
+        <item> Sub Domain dan IP Address </item>
+        <item> IP Based Communication </item>
+        <item> Storage as a Service</item>
+        <item> Keamanan Informasi </item>
+        <item> Koneksi Internet </item>
+        <item> Wifi On Demand </item>
+        <item> Email </item>
+        <item> SSO </item>
+
+        <item> Co-Location </item>
+    </string-array>
+    <string-array name="pilihan_lokasi">
+        <item>-lokasi-</item>
+        <item>Batam </item>
+        <item>Denpasar </item>
+        <item>Jakarta</item>
+        <item>Lampung </item>
+        <item>Serpong </item>
+        <item>Surabaya </item>
+        <item>Yogyakarta </item>
+        <item>Lainnya</item>
+    </string-array>
+    <string name="title_activity_ticket">TicketActivity</string>
+</resources>

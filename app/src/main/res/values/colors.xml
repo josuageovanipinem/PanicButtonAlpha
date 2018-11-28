@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="primary" tools:ignore="MissingDefaultResource">#FFFF00</color>
+    <color name="colorPrimary">#66A5AD</color>
+    <color name="colorPrimaryDark">#07575B</color>
+    <!--color name="colorPrimaryDark">#003B46</color-->
+    <color name="splash">#4f847c</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="window_Background">#66A5AD</color>
+    <!--color name="window_Background">#66A5AD</color-->
+</resources>

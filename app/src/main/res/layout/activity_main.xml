@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_transparent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView0"
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:width="40dp"
+            android:height="40dp"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"
+            android:src="@drawable/csirt_mini3" />
+        <!--android:background="?attr/selectableItemBackground""-->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0"
+
+            android:gravity="center"
+            android:text="Tekan gambar di atas untuk menghubungi SERVICEDESK PMI BPPT"
+            android:textSize="12dp" />
+        
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect"
+                        android:onClick="callWhatsApp"
+                        android:src="@drawable/whatsapp3" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:onClick="callWhatsApp"
+                        android:text="whatsapp chat"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="25dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect"
+                        android:onClick="sms"
+                        android:src="@drawable/sms2" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="sms"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="chatWhatsApp"
+                    android:src="@drawable/gps" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="chatWhatsApp"
+                    android:text="panic message"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="mail"
+                    android:src="@drawable/mail2" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center|bottom"
+                    android:onClick="mail"
+                    android:text="send mail"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:text="Hello CSIRT v.0.2\n Pusat Manajemen Informasi 2018"
+            android:textSize="12dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

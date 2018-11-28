@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource">
+
+    <scale
+        android:duration="1500"
+        android:fromXScale="0.6"
+        android:fromYScale="0.6"
+        android:toXScale="0.7"
+        android:toYScale="0.7"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        />
+</set>

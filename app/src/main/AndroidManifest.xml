@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="panic.com.panicbuttonalpha">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/csirt72x72"
+        android:label="HELLO CSIRT ALPHA"
+        android:roundIcon="@drawable/csirt192x192"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- activity splash -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- activity main dipanggil setelah splash selesai -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".PanicActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".TicketActivity"
+            android:label="@string/title_activity_ticket"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
