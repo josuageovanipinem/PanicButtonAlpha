@@ -3,6 +3,7 @@
     package="panic.com.panicbuttonalpha">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
@@ -39,6 +40,15 @@
             android:name=".TicketActivity"
             android:label="@string/title_activity_ticket"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Livechat"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:label="Live Chat"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".Livechatadmin"></activity>
     </application>
 
 </manifest>

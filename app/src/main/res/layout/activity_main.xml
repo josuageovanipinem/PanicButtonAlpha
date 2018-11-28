@@ -46,15 +46,15 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -79,7 +79,7 @@
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_margin="25dp"
+                    android:layout_margin="20dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -103,14 +103,14 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="25dp"
+                android:layout_margin="20dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/ripple_effect"
-                    android:onClick="chatWhatsApp"
+                    android:onClick="liveChat"
                     android:src="@drawable/gps" />
 
                 <TextView
@@ -126,7 +126,7 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:onClick="chatWhatsApp"
+                    android:onClick="liveChat"
                     android:text="panic message"
                     android:textColor="@android:color/black"
                     android:textSize="12dp" />
@@ -135,7 +135,7 @@
             <LinearLayout
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="25dp"
+                android:layout_margin="20dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -151,8 +151,8 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:gravity="center|bottom"
-                    android:onClick="mail"
-                    android:text="send mail"
+                    android:onClick="liveChatAdmin"
+                    android:text="panic admin"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>

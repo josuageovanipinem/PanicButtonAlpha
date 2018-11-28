@@ -211,6 +211,16 @@ public class MainActivity extends AppCompatActivity {
             }
         },500);
     }
+
+    public void liveChat(View view){
+        Intent intent = new Intent(this, Livechat.class);
+        startActivity(intent);
+    }
+
+    public void liveChatAdmin(View view){
+        Intent intent = new Intent(this, Livechatadmin.class);
+        startActivity(intent);
+    }
 }
 
 
