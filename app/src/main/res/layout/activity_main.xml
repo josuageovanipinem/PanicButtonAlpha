@@ -26,6 +26,7 @@
             android:height="40dp"
             android:background="@drawable/ripple_effect"
             android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/csirt_mini3" />
         <!--android:background="?attr/selectableItemBackground""-->
 
@@ -40,7 +41,7 @@
 
             android:gravity="center"
             android:text="Tekan gambar di atas untuk menghubungi SERVICEDESK PMI BPPT"
-            android:textSize="12dp" />
+            android:textSize="12sp" />
         
 
             <LinearLayout
@@ -73,13 +74,14 @@
                         android:onClick="callWhatsApp"
                         android:text="whatsapp chat"
                         android:textColor="@android:color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_margin="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -97,7 +99,7 @@
                         android:gravity="center"
                         android:text="sms"
                         android:textColor="@android:color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
         <LinearLayout
@@ -110,7 +112,8 @@
             <LinearLayout
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -127,15 +130,16 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="liveChat"
-                    android:text="panic message"
+                    android:text="Live Chat"
                     android:textColor="@android:color/black"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -152,7 +156,7 @@
                     android:layout_weight="1"
                     android:gravity="center|bottom"
                     android:onClick="liveChatAdmin"
-                    android:text="panic admin"
+                    android:text="Live Chat Admin"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -164,6 +168,6 @@
             android:layout_weight="1"
             android:gravity="center|bottom"
             android:text="Hello CSIRT v.0.2\n Pusat Manajemen Informasi 2018"
-            android:textSize="12dp" />
+            android:textSize="12sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
