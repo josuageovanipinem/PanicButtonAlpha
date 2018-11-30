@@ -1,2 +1,2 @@
 # PanicButtonAlpha
-hybrid android app, still got a lot to imporve
+hybrid android app, still have a lots of things to imporve
