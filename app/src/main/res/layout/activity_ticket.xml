@@ -5,56 +5,111 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
     android:background="@drawable/background_transparent"
     tools:context=".TicketActivity"
     tools:ignore="MissingDefaultResource">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/input_nama"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama"
-        android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:met_floatingLabel="highlight" />
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/input_nip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nomor Induk Pegawai"
-        android:inputType="number"
-        android:textSize="16sp"
-        app:met_floatingLabel="highlight" />
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/input_telp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nomor Telepon"
-        android:inputType="number"
-        android:textSize="16sp"
-        app:met_floatingLabel="highlight"
-        app:met_maxCharacters="13" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_nama"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Nama"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight" />
+        </android.support.v7.widget.CardView>
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/input_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Alamat Email"
-        android:inputType="textEmailAddress"
-        android:textSize="16sp"
-        app:met_floatingLabel="highlight" />
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_nip"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Induk Pegawai"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight" />
+        </android.support.v7.widget.CardView>
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/input_unit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Unit Kerja"
-        android:inputType="textCapWords"
-        android:textSize="16sp"
-        app:met_floatingLabel="highlight" />
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_email"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_telp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Telepon"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_unit"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Unit Kerja"
+                android:inputType="textCapWords"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/simpan_button"
@@ -62,7 +117,7 @@
         android:layout_height="wrap_content"
         android:text="simpan"
         android:textAllCaps="true"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="NIK" />
+                android:text="NIP" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Asal Institusi" />
+                android:text="Unit Kerja" />
 
         </LinearLayout>
 
@@ -189,4 +244,13 @@
 
     </LinearLayout>
 
+
+    <Button
+        android:id="@+id/lanjut_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lanjut"
+        android:onClick="firstLogin"
+        android:textAllCaps="true"
+        android:textSize="16sp" />
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="panic.com.panicbuttonalpha">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -12,7 +13,8 @@
         android:label="HELLO CSIRT ALPHA"
         android:roundIcon="@drawable/csirt192x192"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <!-- activity splash -->
         <activity
@@ -40,15 +42,19 @@
             android:name=".TicketActivity"
             android:label="@string/title_activity_ticket"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Livechat"
+            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:label="Live Chat"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Livechatadmin"></activity>
+        <activity android:name=".Livechatadmin"
+            android:theme="@style/AppTheme.NoActionBar">
+            </activity>
     </application>
 
 </manifest>

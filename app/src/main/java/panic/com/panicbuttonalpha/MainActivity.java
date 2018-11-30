@@ -9,18 +9,23 @@ package panic.com.panicbuttonalpha;
 //cannot resolve symbol diselesaikan dengan menghapus .idea pada folder app
 //update: memasukkan id cuma sekali
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
+import android.provider.ContactsContract;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -220,6 +225,32 @@ public class MainActivity extends AppCompatActivity {
     public void liveChatAdmin(View view){
         Intent intent = new Intent(this, Livechatadmin.class);
         startActivity(intent);
+    }
+
+    public void callWA(View view){
+        ContentResolver resolver = getApplicationContext().getContentResolver();
+        @SuppressLint("Recycle") Cursor cursor = resolver.query(
+                ContactsContract.Data.CONTENT_URI,
+                null, null, null,
+                ContactsContract.Contacts.DISPLAY_NAME);
+        //read data from cursor
+        while (cursor.moveToNext()) {
+            long _id = cursor.getLong(cursor.getColumnIndex(ContactsContract.Data._ID));
+            String displayName = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.DISPLAY_NAME));
+            String mimeType = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.MIMETYPE));
+
+            Log.d("Data", _id+ " "+ displayName + " " + mimeType );
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+
+// the _ids you save goes here at the end of /data/12562
+            intent.setDataAndType(Uri.parse("content://com.android.contacts/data/_id"),
+                    "vnd.android.cursor.item/vnd.com.whatsapp.voip.call");
+            intent.setPackage("com.whatsapp");
+
+            startActivity(intent);
+
+        }
     }
 }
 

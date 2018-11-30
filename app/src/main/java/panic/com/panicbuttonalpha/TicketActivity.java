@@ -1,9 +1,11 @@
 package panic.com.panicbuttonalpha;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -56,10 +58,23 @@ public class TicketActivity extends AppCompatActivity {
 
     @OnClick(R.id.simpan_button)
     public void btnClicked() {
-        if (inputNama.getText().toString().length()==0){
-            inputNama.setError("Nama diperlukan");
+        sharedPreferences = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(Nama)){
+            inputNama.setText(sharedPreferences.getString(Nama, ""));
         }
-        String nama = inputNama.getText().toString();
+        if (sharedPreferences.contains(Email)){
+            inputEmail.setText(sharedPreferences.getString(Email,""));
+        }
+        if (sharedPreferences.contains(NIP)){
+            inputNip.setText(sharedPreferences.getString(NIP,""));
+        }
+        if (sharedPreferences.contains(Telp)){
+            inputTelp.setText(sharedPreferences.getString(Telp,""));
+        }
+        if (sharedPreferences.contains(Unit)){
+            inputUnit.setText(sharedPreferences.getString(Unit,""));
+        }
+/*        String nama = inputNama.getText().toString();
         hasilNama.setText(nama);
         String nip = inputNip.getText().toString();
         hasilNip.setText(nip);
@@ -68,11 +83,27 @@ public class TicketActivity extends AppCompatActivity {
         String email = inputEmail.getText().toString();
         hasilEmail.setText(email);
         String institusi = inputUnit.getText().toString();
-        hasilUnit.setText(institusi);
-
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        hasilUnit.setText(institusi);*/
     }
+
+    public void firstLogin(View view){
+        String n = hasilNama.getText().toString();
+        String e = hasilEmail.getText().toString();
+        String t = hasilTelp.getText().toString();
+        String ni = hasilNip.getText().toString();
+        String u = hasilUnit.getText().toString();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Nama,n);
+        editor.putString(NIP,ni);
+        editor.putString(Email,e);
+        editor.putString(Telp,t);
+        editor.putString(Unit,u);
+        editor.apply();
+
+        Intent intentMain = new Intent(this, MainActivity.class);
+        startActivity(intentMain);
+    }
+
 
 
 
